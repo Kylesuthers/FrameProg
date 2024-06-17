@@ -58,6 +58,14 @@ def add_numbers():
 
 add_numbers()
 
+def add_numbers2(*args):
+    result = 0
+    for i in args:
+        result += i
+        return result
+
+add_numbers2(1, 2, 3)
+
 # function to reverse a string
 def string_to_reverse():
     user_string = input('Enter String: ')
@@ -75,7 +83,16 @@ def averages():
 
 averages()
 
-#ount charaters
+def calc_ave(list_num):
+    total = 0
+    for i in list_num:
+        total += i
+    average = total / len(list_num)
+    return average
+
+calc_ave(1,2,3,4,5)
+
+#count charaters
 def count_char():
     user_string = input('Enter a string: ')
     char_to_count = input('Enter a character to count: ')
@@ -83,6 +100,8 @@ def count_char():
     print(count)
 
 count_char()
+
+'hello world' .count ('o')
 
 #get even numbers
 
@@ -94,6 +113,15 @@ def get_even_numbers():
     print(even_numbers)
 
 get_even_numbers()
+
+def get_even_numbers2(numb_list):
+    evens = []
+    for i in numb_list:
+        if i %2 == 0:
+            evens.append(i)
+        return evens
+
+get_even_numbers2([1,2,3,4,5,6,7,8,9])
 
 # find the longest string
 
